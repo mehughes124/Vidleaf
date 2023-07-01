@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Laravel</title>
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+        <!-- Styles -->
+        <link href="resources/css/app.css" rel="stylesheet" type="text/css"/>
+        <style>
+            body {
+                font-family: 'Nunito', sans-serif;
+            }
+            html, body, section {
+              block-size: 100%;
+            }
+            
+            html {
+              scroll-snap-type: y mandatory;
+            }
+            
+            section {
+              scroll-snap-align: start;
+              scroll-snap-stop: always;
+              
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            
+            section:nth-of-type(even) {
+              color: white;
+              background: black;
+            }
+            
+            section:nth-of-type(odd) {
+              color: black;
+              background: white;
+            }
+
+            video {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+            
+            body {
+              margin: 0;
+              font-family: system-ui, sans-serif;
+              font-size: 4rem;
+            }
+        </style>
+    </head>
+    <body>
+      <section>
+        <h1>video 1</h1>
+        <video autoplay loop>
+          <source src="/resources/videos/vertical_demo.webm" type="video/webm">
+        </video>
+      </section>
+      <section>
+        <h1>video 2</h1>
+      </section>
+      <section>
+        <h1>video 3</h1>
+      </section>
+      <section>
+        <h1>video 4</h1>
+      </section>
+      <section>
+        <h1>video 5</h1>
+      </section>
+     
+    </body>
+</html>
