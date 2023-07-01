@@ -30,7 +30,7 @@
               display: flex;
               align-items: center;
               justify-content: center;
-              position: relative; /* Added position relative */
+              position: relative; 
             }
             
             section:nth-of-type(even) {
@@ -60,6 +60,7 @@
             font-size: 4rem;
             color: white;
             z-index: 1;
+            cursor: pointer; /* Added cursor pointer */
             }
             
             body {
@@ -68,11 +69,25 @@
               font-size: 4rem;
             }
         </style>
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            var video = document.getElementById('hero_video');
+            var videoText = document.querySelector('.video-text');
+            
+            videoText.addEventListener('click', function() {
+              if (video.paused) {
+                video.play();
+              } else {
+                video.pause();
+              }
+            });
+          });
+        </script>
     </head>
     <body>
       <section>
-        <h1 class="video-text">video 1</h1>
-          <video autoplay="" playsinline="" loop="" src="https://user-images.githubusercontent.com/3944972/250218808-54a6f4b0-fc00-41e2-aaa1-dbb52c4a3f8b.webm" data-canonical-src="https://user-images.githubusercontent.com/3944972/250218808-54a6f4b0-fc00-41e2-aaa1-dbb52c4a3f8b.webm">
+        <h1 class="video-text">play video</h1>
+          <video id="hero_video" autoplay playsinline loop src="https://user-images.githubusercontent.com/3944972/250218808-54a6f4b0-fc00-41e2-aaa1-dbb52c4a3f8b.webm" data-canonical-src="https://user-images.githubusercontent.com/3944972/250218808-54a6f4b0-fc00-41e2-aaa1-dbb52c4a3f8b.webm">
         </video>
       </section>
       <section>
