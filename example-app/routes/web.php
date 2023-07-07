@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/vidleaf', function () {
+    return view('vertical-video-demo');
+});
+
+Route::get('/demo2', function () {
+    return view('demo2');
+});

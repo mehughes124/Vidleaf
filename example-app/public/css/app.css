@@ -1,0 +1,66 @@
+/* body {
+    font-family: 'Nunito', sans-serif;
+}
+html, body, section {
+  height: 100vh;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; 
+  background: black;
+}
+
+#hero_video {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  min-width: 100%;
+  height: calc(100vh - 200px); 
+  transform: translateY(-50%);
+  object-fit: cover;
+}
+
+.video-text {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 4rem;
+color: white;
+z-index: 1;
+cursor: pointer; 
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  font-size: 4rem;
+}
+
+.click-block {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border: 2px solid red;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.svg-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+} */
