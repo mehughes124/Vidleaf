@@ -1,3 +1,5 @@
+
+// global audio and video playback handling, as well as animation controller for arrows 
 let globalMuteState = true;
 let currentSection = null;
 
@@ -33,7 +35,7 @@ sections.forEach((section) => {
     });
 });
 
-// animate bottom arrows when visible
+// remove muted svg on click and animate bottom arrows on visible
 document.addEventListener('DOMContentLoaded', (event) => {
     var observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
@@ -69,3 +71,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
         observer.observe(section);
     });
 });
+
+// remove bouncing arrow from last section
+document.addEventListener('DOMContentLoaded', () => {
+    // Get the last section
+    let lastSection = sections[sections.length - 1];
+
+    // Get the "bounce-arrow" div in the last section
+    let bounceArrowDiv = lastSection.querySelector('.bounce-arrow');
+
+    // Add the "last-arrow" class to this div
+    bounceArrowDiv.classList.add('last-arrow');
+});
+
+

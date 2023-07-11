@@ -7,12 +7,12 @@
         <link href="{{ asset('/css/demo2.css') }}" rel="stylesheet">
     </head>
     <body class="snap-scrolling">
-        <section class="snap-start snap-stop-always section">
+        <section id="1" class="snap-start snap-stop-always section">
+            <h1>Vidleaf</h1>
             <video id="section1-video" autoplay muted loop class="section-video">
                 <source src="{{ asset('/videos/demo_video.webm') }}" type="video/webm">
             </video>
             <div class="section-content">
-                <h1>Section 1</h1>
                 <div class="svg-background-circle">
                     <svg class="mute-svg-icon" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 512 512" style="display: block; margin: auto;">
                         <line x1="416" y1="432" x2="64" y2="80" style="stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/>
@@ -23,25 +23,27 @@
                         <path d="M480,256c0-74.25-20.19-121.11-50.51-168.61a16,16,0,1,0-27,17.22C429.82,147.38,448,189.5,448,256c0,46.19-8.43,80.27-22.43,110.53a8,8,0,0,0,1.59,9l11.92,11.92A8,8,0,0,0,452,385.29C471.6,344.9,480,305,480,256Z"/>
                     </svg>
                 </div>
-                <div class="image-link">
-                    <div class="profile-pic-wrapper">
-                        <img class="profile-pic" src="{{ asset('/images/profile_pic.jpeg') }}" alt="Image1">
-                        <span class="image-text">mehughes124</span>
-                    </div>
-                    <div class="link-wrapper">
-                        <a href="#link1">Shop My Deals<span class="link-arrow">›</span></a>
+                <div class="image-link-wrapper">
+                    <div class="image-link">
+                        <div class="profile-pic-wrapper">
+                            <img class="profile-pic" src="{{ asset('/images/profile_pic.jpeg') }}" alt="Image1">
+                            <span class="image-text">mehughes124</span>
+                        </div>
+                        <div class="link-wrapper">
+                            <a href="#link1">Shop My Deals<span class="link-arrow">›</span></a>
+                        </div>
                     </div>
                 </div>
                 <div class="bounce-arrow">⬇</div>
             </div>
         </section>
 
-        <section class="snap-start snap-stop-always section">
+        <section id="2" class="snap-start snap-stop-always section">
+            <h1>Vidleaf</h1>
             <video id="section2-video" muted loop class="section-video">
                 <source src="{{ asset('/videos/2nd section video.webm') }}" type="video/webm">
             </video>
             <div class="section-content">
-                <h1>Section 2</h1>
                 <div class="svg-background-circle">
                     <svg class="mute-svg-icon" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 512 512" style="display: block; margin: auto;">
                         <line x1="416" y1="432" x2="64" y2="80" style="stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/>
@@ -52,25 +54,27 @@
                         <path d="M480,256c0-74.25-20.19-121.11-50.51-168.61a16,16,0,1,0-27,17.22C429.82,147.38,448,189.5,448,256c0,46.19-8.43,80.27-22.43,110.53a8,8,0,0,0,1.59,9l11.92,11.92A8,8,0,0,0,452,385.29C471.6,344.9,480,305,480,256Z"/>
                     </svg>
                 </div>
-                <div class="image-link">
-                    <div class="profile-pic-wrapper">
-                        <img class="profile-pic" src="{{ asset('/images/profile_pic.jpeg') }}" alt="Image1">
-                        <span class="image-text">mehughes124</span>
-                    </div>
-                    <div class="link-wrapper">
-                        <a href="#link2">Go to my YouTube<span class="link-arrow">›</span></a>
+                <div class="image-link-wrapper">
+                    <div class="image-link">
+                        <div class="profile-pic-wrapper">
+                            <img class="profile-pic" src="{{ asset('/images/profile_pic.jpeg') }}" alt="Image1">
+                            <span class="image-text">mehughes124</span>
+                        </div>
+                        <div class="link-wrapper">
+                            <a href="#link2">Go to my YouTube<span class="link-arrow">›</span></a>
+                        </div>
                     </div>
                 </div>
                 <div class="bounce-arrow">⬇</div>
             </div>
         </section>
 
-        <section class="snap-start snap-stop-always section">
+        <section id="3" class="snap-start snap-stop-always section">
+            <h1>Vidleaf</h1>
             <video id="section3-video" muted loop class="section-video">
                 <source src="{{ asset('/videos/3rd section video.webm') }}" type="video/webm">
             </video>
             <div class="section-content">
-                <h1>Section 3</h1>
                 <div class="svg-background-circle">
                     <svg class="mute-svg-icon" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 512 512" style="display: block; margin: auto;">
                         <line x1="416" y1="432" x2="64" y2="80" style="stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/>
@@ -81,16 +85,18 @@
                         <path d="M480,256c0-74.25-20.19-121.11-50.51-168.61a16,16,0,1,0-27,17.22C429.82,147.38,448,189.5,448,256c0,46.19-8.43,80.27-22.43,110.53a8,8,0,0,0,1.59,9l11.92,11.92A8,8,0,0,0,452,385.29C471.6,344.9,480,305,480,256Z"/>
                     </svg>
                 </div>
-                <div class="image-link">
-                    <div class="profile-pic-wrapper">
-                        <img class="profile-pic" src="{{ asset('/images/profile_pic.jpeg') }}" alt="Image1">
-                        <span class="image-text">mehughes124</span>
-                    </div>
-                    <div class="link-wrapper">
-                        <a href="#link3">Get That Newsletter<span class="link-arrow">›</span></a>
+                <div class="image-link-wrapper">
+                    <div class="image-link">
+                        <div class="profile-pic-wrapper">
+                            <img class="profile-pic" src="{{ asset('/images/profile_pic.jpeg') }}" alt="Image1">
+                            <span class="image-text">mehughes124</span>
+                        </div>
+                        <div class="link-wrapper">
+                            <a href="#link3">Get That Newsletter<span class="link-arrow">›</span></a>
+                        </div>
                     </div>
                 </div>
-                <div class="bounce-arrow last-arrow">⬇</div>
+                <div class="bounce-arrow">⬇</div>
             </div>
         </section>
     </body>
