@@ -7,15 +7,10 @@
         <link href="{{ asset('/css/demo2.css') }}" rel="stylesheet">
     </head>
     <body class="snap-scrolling">
-    <div class="content-wrapper">
-        <section id="section1" class="snap-start snap-stop-always section">
-            <!-- <a class="invisible-anchor-link" href="#section1">Section 1</a> -->
-            <div class="hero-copy-container">
-                <p class="hero-copy-line-1">Your Link-in-Bio</p>
-                <p class="hero-copy-line-2"><span class="twinkle-star">✨</span>SUCKS<spanclass="twinkle-star">✨</span></p>
-            </div>  
-            <video id="section1-video" width="100%" autoplay muted loop class="section-video">
-                <source src="{{ asset('/videos/peachy_link_lp.mp4') }}" type="video/mp4">
+        <section id="1" class="snap-start snap-stop-always section">
+            <h1>Scroll Me - mehughes124</h1>
+            <video id="section1-video" autoplay muted loop class="section-video">
+                <source src="{{ asset('/videos/demo_video.webm') }}" type="video/webm">
             </video>
             <div class="section-content">
                 <div class="svg-background-circle">
@@ -31,11 +26,11 @@
                 <div class="image-link-wrapper">
                     <div class="image-link">
                         <div class="profile-pic-wrapper">
-                            <img class="profile-pic" src="{{ asset('/images/peach_logo.png') }}" alt="Image1">
-                            <span class="image-text">linkpeach</span>
+                            <img class="profile-pic" src="{{ asset('/images/profile_pic.jpeg') }}" alt="Image1">
+                            <span class="image-text">mehughes124</span>
                         </div>
                         <div class="link-wrapper">
-                            <a href="#section2">Grow Faster<span class="link-arrow">⤵</span></a>
+                            <a href="#link1">Shop My Deals<span class="link-arrow">›</span></a>
                         </div>
                     </div>
                 </div>
@@ -43,8 +38,8 @@
             </div>
         </section>
 
-        <section id="section2" class="snap-start snap-stop-always section">
-            <a class="invisible-anchor-link" href="#section2">Section 2</a>
+        <section id="2" class="snap-start snap-stop-always section">
+            <h1>ScrollMe/mehughes124</h1>
             <video id="section2-video" muted loop class="section-video">
                 <source src="{{ asset('/videos/2nd section video.webm') }}" type="video/webm">
             </video>
@@ -74,7 +69,7 @@
             </div>
         </section>
 
-        <section id="section3" class="snap-start snap-stop-always section">
+        <section id="3" class="snap-start snap-stop-always section">
             <h1>ScrollMe/mehughes124</h1>
             <video id="section3-video" muted loop class="section-video">
                 <source src="{{ asset('/videos/3rd section video.webm') }}" type="video/webm">
@@ -104,7 +99,6 @@
                 <div class="bounce-arrow">⬇</div>
             </div>
         </section>
-    </div>
     </body>
     <script src="{{ asset('js/app.js') }}"></script>
 </html>

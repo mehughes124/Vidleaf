@@ -24,3 +24,7 @@ Route::get('/vidleaf', function () {
 Route::get('/demo2', function () {
     return view('demo2');
 });
+
+Route::get('/marketing-lp', function () {
+    return view('marketing-lp');
+});
