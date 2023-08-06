@@ -17,19 +17,7 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/vidleaf', function () {
-    return view('vertical-video-demo');
-});
-
-Route::get('/demo2', function () {
-    return view('demo2');
-});
-
-Route::get('/marketing-lp', function () {
-    return view('marketing-lp');
+    return view('linkberree-lp');
 });
 
 Route::post('/join-waitlist', function (Request $request) {
