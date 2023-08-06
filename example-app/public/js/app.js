@@ -85,3 +85,77 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+document.getElementById('waitlist-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var email = document.getElementById('email').value;
+
+    fetch('/join-waitlist', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+        },
+        body: JSON.stringify({ email: email })
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Show the success message
+        document.getElementById('waitlist-form').classList.add('hidden');
+        document.getElementById('success-message').classList.remove('hidden');
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        // You can handle any errors here, such as displaying an error message to the user
+    });
+});
+
+
+function openModal() {
+    document.getElementById('modal-form').style.display = "block";
+}
+function closeModal() {
+    document.getElementById('modal-form').style.display = "none";
+}
+
+document.querySelectorAll('.join-waitlist-link').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent the default behavior of the link
+        openModal();
+    });
+});
+
+document.getElementById('modal-form').addEventListener('click', function(e) {
+    var modalContent = document.querySelector('.modal-content');
+    
+    // Check if the click was outside the modal content
+    if (!modalContent.contains(e.target)) {
+        closeModal();
+    }
+});
+
+
+var emailInput = document.getElementById('email');
+var modalContent = document.querySelector('.modal-content');
+
+emailInput.addEventListener('click', function(e) {
+    e.stopPropagation(); // Prevent the click event from closing the modal
+    modalContent.classList.toggle('modal-content-up'); // Toggle the class to adjust the modal's position
+});
+
+// Prevent clicks inside the modal content from closing the modal
+modalContent.addEventListener('click', function(e) {
+    e.stopPropagation();
+});
+
+document.getElementById('modal-form').addEventListener('click', function() {
+    modalContent.classList.remove('modal-content-up'); // Reset the modal's position
+    closeModal();
+});
+
+
+
+
+
+
+
+

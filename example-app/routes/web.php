@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Waitlist;
+use Illuminate\Http\Request;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -27,4 +30,10 @@ Route::get('/demo2', function () {
 
 Route::get('/marketing-lp', function () {
     return view('marketing-lp');
+});
+
+Route::post('/join-waitlist', function (Request $request) {
+    $request->validate(['email' => 'required|email']);
+    Waitlist::create($request->only('email'));
+    return response()->json(['message' => 'Thank you for joining the waitlist!']);
 });
