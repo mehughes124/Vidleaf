@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>Vertical Video Demo</title>
+        <title>Linkberree</title>
         <link href="{{ asset('/css/demo2.css') }}" rel="stylesheet">
     </head>
     <body class="snap-scrolling">
