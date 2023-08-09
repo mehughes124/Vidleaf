@@ -4,8 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>Linkberree</title>
-        <link href="{{ asset('/css/demo2.css') }}" rel="stylesheet">
+        <title>Linkberree | Get More Clicks</title>
+        <link href="{{ asset('/css/linkberree-lp.css') }}" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     </head>
     <body class="snap-scrolling">
     <div class="content-wrapper">
@@ -45,7 +46,7 @@
                     <div class="image-link">
                         <div class="profile-pic-wrapper">
                             <img class="profile-pic" src="{{ asset('/images/linkberree_icon_thick.png') }}" alt="Image1">
-                            <span class="image-text">linkberree</span>
+                            <span class="image-text">LinkBerree</span>
                         </div>
                         <div class="link-wrapper">
                             <a href="#section2">Get A Better One<span class="link-arrow">⤵</span></a>
@@ -59,14 +60,14 @@
         <section id="section2" class="section">
             <!-- <a class="invisible-anchor-link" href="#section1">Section 1</a> -->
             <div class="hero-copy-container">
-                <p class="hero-copy-line-1">Linkberree is Better</p>
-                <p class="hero-copy-line-2"><span class="twinkle-star">✨</span>Oh yeah?<spanclass="twinkle-star">✨</span></p>
+                <p class="hero-copy-line-1">Get LinkBerree</p>
+                <p class="hero-copy-line-2"><span class="twinkle-star">✨</span>Get Clicks<spanclass="twinkle-star">✨</span></p>
             </div>
             <div class="unordered-list-container">
                 <ul class="list-section">
-                    <li><span class="unordered-list-span"><strong>Get More Clicks!</strong> - every link is placed for quick thumb access </span><span class="pink-checkmark">✔</span></li>
-                    <li><span class="unordered-list-span"><strong>Sell Yourself!</strong> - your fans want YOU. Give them a reason to click with a video, pic or description </span><span class="pink-checkmark">✔</span></li>
-                    <li><span class="unordered-list-span"><strong>Show Off!</strong> - every link gets a chance to shine with its own section </span><span class="pink-checkmark">✔</span></li>
+                    <li><span class="unordered-list-span"><span class="list-headline">*Easy* to Click</span><br><span class="list-subhead"> Every link is right under your fan's thumb 👍</span></span></li>
+                    <li><span class="unordered-list-span"><span class="list-headline">*A Reason* To Click</span><br><span class="list-subhead"> Tell your fans WHY to click with a video, pic or description</span></span></li>
+                    <li><span class="unordered-list-span"><span class="list-headline">*What* To Click</span><br><span class="list-subhead"> Each link stands alone in a swipeable section</span></span></li>
                 </ul>
             </div>
             <div class="section-content">
@@ -74,12 +75,12 @@
                     <div class="image-link">
                         <div class="profile-pic-wrapper">
                             <img class="profile-pic" src="{{ asset('/images/linkberree_icon_thick.png') }}" alt="Image1">
-                            <span class="image-text">linkberree</span>
+                            <span class="image-text">LinkBerree</span>
                         </div>
                         <div class="link-wrapper">
-                            <a href="#section3" class="join-waitlist-link">Join Waitlist<span class="link-arrow">✉️</span></a>
+                            <a href="#section3" class="join-waitlist-link">Join Waitlist Now<span class="link-email-emoji">✉️</span></a>
                         </div>
-                        <div class="exclusive-line">* no spam, ever. Join for exclusive Early Access</div>
+                        <div class="exclusive-line">* no spam, ever. Sign up for exclusive Early Access</div>
                     </div>
                 </div>
                 <div class="bounce-arrow">⬇</div>
@@ -90,14 +91,14 @@
         <section id="section3" class="section">
             <!-- <a class="invisible-anchor-link" href="#section1">Section 1</a> -->
             <div class="hero-copy-container">
-                <p class="hero-copy-line-1">You're on Linkberree</p>
+                <p class="hero-copy-line-1">You're on a Linkberree</p>
                 <p class="hero-copy-line-2"><span class="twinkle-star">✨</span>Right Now<spanclass="twinkle-star">✨</span></p>
             </div>
             <div class="unordered-list-container">
                 <ul class="list-section">
-                    <li><span class="unordered-list-span"><strong>Join Below!</strong> - Get on the waitlist to secure early access. </span><span class="pink-checkmark">✔</span></li>
-                    <li><span class="unordered-list-span"><strong>Get Pro Help!</strong> - early Linkberree users will get a personal review from link-in-bio experts!</span><span class="pink-checkmark">✔</span></li>
-                    <li><span class="unordered-list-span"><strong>Get a Deal!</strong> - the first 50 Linkberree signups will receive a *lifetime* 50% discount</span><span class="pink-checkmark">✔</span></li>
+                    <li><span class="unordered-list-span"><span class="list-headline">So Easy to Use</span><br><span class="list-subhead">Just swipe and click... done. </span></span></li>
+                    <li><span class="unordered-list-span"><span class="list-headline">You want one?</span><br><span class="list-subhead">Get on the waitlist to secure early access. </span></span></li>
+                    <li><span class="unordered-list-span"><span class="list-headline">Get a Sign-up Bonus</span><br><span class="list-subhead">the first Linkberree signups receive a *lifetime* discount</span></span></li>
                 </ul>
             </div>
             <div class="section-content">
@@ -105,12 +106,12 @@
                     <div class="image-link">
                         <div class="profile-pic-wrapper">
                             <img class="profile-pic" src="{{ asset('/images/linkberree_icon_thick.png') }}" alt="Image1">
-                            <span class="image-text">linkberree</span>
+                            <span class="image-text">LinkBerree</span>
                         </div>
                         <div class="link-wrapper">
-                            <a href="#section3" class="join-waitlist-link">Join Waitlist<span class="link-arrow">✉️</span></a>
+                            <a href="#section3" class="join-waitlist-link">Join Waitlist Now<span class="link-email-emoji">✉️</span></a>
                         </div>
-                        <div class="exclusive-line">* no spam, ever. Join for exclusive Early Access.</div>
+                        <div class="exclusive-line">* no spam, ever. Sign up for exclusive Early Access.</div>
                     </div>
                 </div>
                 <div class="bounce-arrow">⬇</div>
