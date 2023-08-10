@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Linkberree | Get More Clicks</title>
-        <link href="{{ asset('/css/linkberree-lp-grid.css') }}" rel="stylesheet">
+        <link href="{{ asset('/css/linkberree-lp.css') }}" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     </head>
     <body class="snap-scrolling">
