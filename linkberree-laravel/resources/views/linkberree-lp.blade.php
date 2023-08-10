@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Linkberree | Get More Clicks</title>
-        <link href="{{ asset('/css/linkberree-lp.css') }}" rel="stylesheet">
+        <link href="{{ asset('/css/linkberree-lp-grid.css') }}" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     </head>
     <body class="snap-scrolling">
@@ -14,7 +14,7 @@
             <div class="modal-content">
                 <form id="waitlist-form">
                     <input type="email" id="email" placeholder="Email" required>
-                    <button type="submit">Join Waitlist</button>
+                    <button class="modal-submit-button" type="submit">Join Waitlist</button>
                     <p class="modal-subtitle">no spam, ever. Join for exclusive Early Access</p>
                 </form>
                 <div id="success-message" class="hidden">
@@ -22,8 +22,7 @@
                 </div>
             </div>
         </div>
-        <section id="section1" class="section-with-video">
-            <!-- <a class="invisible-anchor-link" href="#section1">Section 1</a> -->
+        <section id="section1" class="section-grid section-with-video">
             <div class="hero-copy-container">
                 <p class="hero-copy-line-1">Your Link-in-Bio</p>
                 <p class="hero-copy-line-2"><span class="twinkle-star">✨</span>SUCKS<spanclass="twinkle-star">✨</span></p>
@@ -31,7 +30,7 @@
             <video id="section1-video" width="100%" autoplay muted loop class="section-video">
                 <source src="{{ asset('/videos/peachy_link_lp.mp4') }}" type="video/mp4">
             </video>
-            <div class="section-content">
+            <div class="bottom-third-content">
                 <!-- <div class="svg-background-circle">
                     <svg class="mute-svg-icon" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 512 512" style="display: block; margin: auto;">
                         <line x1="416" y1="432" x2="64" y2="80" style="stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/>
@@ -57,20 +56,19 @@
             </div>
         </section>
 
-        <section id="section2" class="section">
-            <!-- <a class="invisible-anchor-link" href="#section1">Section 1</a> -->
+        <section id="section2" class="section-grid">
             <div class="hero-copy-container">
-                <p class="hero-copy-line-1">Get LinkBerree</p>
+                <p class="hero-copy-line-1">Get a LinkBerree</p>
                 <p class="hero-copy-line-2"><span class="twinkle-star">✨</span>Get Clicks<spanclass="twinkle-star">✨</span></p>
             </div>
             <div class="unordered-list-container">
                 <ul class="list-section">
-                    <li><span class="unordered-list-span"><span class="list-headline">*Easy* to Click</span><br><span class="list-subhead"> Every link is right under your fan's thumb 👍</span></span></li>
+                    <li><span class="unordered-list-span"><span class="list-headline">*Easy* to Click</span><br><span class="list-subhead"> Every link is right under your fan's thumbs 👍</span></span></li>
                     <li><span class="unordered-list-span"><span class="list-headline">*A Reason* To Click</span><br><span class="list-subhead"> Tell your fans WHY to click with a video, pic or description</span></span></li>
                     <li><span class="unordered-list-span"><span class="list-headline">*What* To Click</span><br><span class="list-subhead"> Each link stands alone in a swipeable section</span></span></li>
                 </ul>
             </div>
-            <div class="section-content">
+            <div class="bottom-third-content">
                 <div class="image-link-wrapper">
                     <div class="image-link">
                         <div class="profile-pic-wrapper">
@@ -88,20 +86,19 @@
         </section>
 
 
-        <section id="section3" class="section">
-            <!-- <a class="invisible-anchor-link" href="#section1">Section 1</a> -->
+        <section id="section3" class="section-grid">
             <div class="hero-copy-container">
-                <p class="hero-copy-line-1">You're on a Linkberree</p>
+                <p class="hero-copy-line-1">You're on a LinkBerree</p>
                 <p class="hero-copy-line-2"><span class="twinkle-star">✨</span>Right Now<spanclass="twinkle-star">✨</span></p>
             </div>
             <div class="unordered-list-container">
                 <ul class="list-section">
-                    <li><span class="unordered-list-span"><span class="list-headline">So Easy to Use</span><br><span class="list-subhead">Just swipe and click... done. </span></span></li>
-                    <li><span class="unordered-list-span"><span class="list-headline">You want one?</span><br><span class="list-subhead">Get on the waitlist to secure early access. </span></span></li>
-                    <li><span class="unordered-list-span"><span class="list-headline">Get a Sign-up Bonus</span><br><span class="list-subhead">the first Linkberree signups receive a *lifetime* discount</span></span></li>
+                    <li><span class="unordered-list-span"><span class="list-headline">Isn't It Easy?</span><br><span class="list-subhead">Just swipe and click... Simple! </span></span></li>
+                    <li><span class="unordered-list-span"><span class="list-headline">Launching Soon</span><br><span class="list-subhead">Get on the waitlist to secure early access. </span></span></li>
+                    <li><span class="unordered-list-span"><span class="list-headline">Sign-up Bonus</span><br><span class="list-subhead">early Linkberree signups receive a *lifetime* discount</span></span></li>
                 </ul>
             </div>
-            <div class="section-content">
+            <div class="bottom-third-content">
                 <div class="image-link-wrapper">
                     <div class="image-link">
                         <div class="profile-pic-wrapper">

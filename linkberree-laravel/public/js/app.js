@@ -133,24 +133,27 @@ document.getElementById('modal-form').addEventListener('click', function(e) {
     }
 });
 
+// push up modal on focus on mobile
+if (/Mobi|Android/i.test(navigator.userAgent)) {
+    var emailInput = document.getElementById('email');
+    var modalContent = document.querySelector('.modal-content');
 
-var emailInput = document.getElementById('email');
-var modalContent = document.querySelector('.modal-content');
+    emailInput.addEventListener('click', function(e) {
+        e.stopPropagation(); // Prevent the click event from closing the modal
+        modalContent.classList.toggle('modal-content-up'); // Toggle the class to adjust the modal's position
+    });
 
-emailInput.addEventListener('click', function(e) {
-    e.stopPropagation(); // Prevent the click event from closing the modal
-    modalContent.classList.toggle('modal-content-up'); // Toggle the class to adjust the modal's position
-});
+    // Prevent clicks inside the modal content from closing the modal
+    modalContent.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
 
-// Prevent clicks inside the modal content from closing the modal
-modalContent.addEventListener('click', function(e) {
-    e.stopPropagation();
-});
+    document.getElementById('modal-form').addEventListener('click', function() {
+        modalContent.classList.remove('modal-content-up'); // Reset the modal's position
+        closeModal();
+    });
+}
 
-document.getElementById('modal-form').addEventListener('click', function() {
-    modalContent.classList.remove('modal-content-up'); // Reset the modal's position
-    closeModal();
-});
 
 
 

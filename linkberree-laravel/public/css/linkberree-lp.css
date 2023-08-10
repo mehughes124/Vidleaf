@@ -5,20 +5,18 @@ html, body {
     width: 100%;
     margin: 0;
     padding: 0;
-    font-size: 14px;
+    font-size: 2vh;
 }
 
 body {
     font-family: 'Lato', sans-serif;
-    /* letter-spacing: .08em; */
-
 }
 
 @media (min-width: 768px) {
     html {
-      font-size: 18px;
+      font-size: 1.5vh;
     }
-  }
+}
 
 body {
     background-image: radial-gradient(56% 100%, rgb(255, 255, 255) 25%, rgba(51, 21, 78, 0.13) 150%);
@@ -57,18 +55,19 @@ body {
 }
 
 .modal-content-up {
-    margin-top: 35%; /* Adjust as needed */
+    margin-top: 35%;
 }
 
 .modal-content input {
     width: 100%;
     padding: 15px;
     margin: 10px 0;
+    font-size: 1.15rem;
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
 
-.modal-content button {
+.modal-submit-button {
     background-color:#e81b8e;
     color: white;
     padding: 14px 20px;
@@ -76,6 +75,7 @@ body {
     border: none;
     cursor: pointer;
     width: 100%;
+    font-size: 1.15rem;
 }
 
 .modal-content button:hover {
@@ -90,8 +90,6 @@ body {
 .hidden {
     display: none;
 }
-
-
 
 .invisible-anchor-link {
     color: transparent;
@@ -109,37 +107,15 @@ section {
     position: relative;
 }
 
-.section-video {
-    position: absolute;
-    top: 45%;
-    left: 0;
-    width: 100%;
-    height: 400px;
-    transform: translateY(-50%);
-    object-fit: contain;
-    z-index: 1;
+.section-grid{
+    display: grid;
+    grid-template-rows: 1fr 50vh 1fr;
+    
 }
 
-
-.section-content {
-    position: relative;
-    z-index: 2;
-    color: rgb(42, 42, 42);
-    text-align: center;
-    padding: 20px;
-    height: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: auto;
-}
 
 .hero-copy-container {
-    position: absolute;  
-    top: 3%;              
-    left: 0;             
-    right: 0;            
+    margin-top: 5vh;
     text-align: center;  
     z-index: 2;
     color: white;
@@ -154,6 +130,28 @@ section {
 .hero-copy-line-2 {
     animation: fade-in-hero 3s ease-in-out forwards;
     color: #e81b8e;
+    letter-spacing: .15rem;
+    margin-top: -1.35rem;
+}
+
+.section-video {
+    width: 100%;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.bottom-third-content {
+    transform: translateY(-5vh);
+    position: relative;
+    z-index: 2;
+    color: rgb(42, 42, 42);
+    text-align: center;
+    padding: 20px;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 @keyframes fade-in-hero {
@@ -166,17 +164,15 @@ section {
 }
 
 .unordered-list-container {
-    position: absolute;
-    top: 42%;
-    left: 0;
+    transform: translateY(-5vh);
     width: 100%;
-    height: 400px;
+    min-height: 400px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1;
-    transform: translateY(-50%);
+    position: relative; 
 }
 
 .unordered-list-container::before {
@@ -188,7 +184,7 @@ section {
     bottom: 0;
     left: 0;
     background-image: url('/images/linkberree_icon_thick.png');
-    background-size: 350px auto;
+    background-size: auto calc(100% * 0.7); /* Adjusts the background height to 90% */
     background-repeat: no-repeat;
     background-position: center center;
     opacity: 0.1;
@@ -198,21 +194,19 @@ section {
 
 .list-section {
     background: linear-gradient(rgba(200, 200, 200, 0.1), rgba(200, 200, 200, 0.1)), whitesmoke;
-    color: #e81b8e; 
-    font-size: 1.25rem;
     text-align: left;
+    /* border: solid red 5px; */
     padding: 20px 20px 20px 20px;
-    list-style-type: disc;
-    padding-left: 4rem;
-    padding-right: 4rem;
-    max-width: 80%; /* Adjust as needed */
+    list-style-type: none;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    max-width: 100%; 
 }
 
 
 .list-section li {
-    list-style-type: none; 
     color: rgba(42, 42, 42, 0.6);
-    margin-bottom: 2.3rem;
+    margin-bottom: 1.25rem;
     line-height: 1.6;
 }
 
@@ -361,11 +355,10 @@ section {
     color:#FAF9F6;
     text-shadow: 1px 1px 1px rgb(42, 42, 42);
     position: absolute;
-    bottom: 10px;
+    bottom: -10%;
     left: 50%;
     transform: translateX(-50%);
     font-size: 2rem;
-    /* visibility:hidden; */
 }
 
 .last-arrow {
@@ -373,7 +366,6 @@ section {
 }
 
 .bounce-visible {
-    /* visibility: visible; */
     animation: bounce 1s ease infinite;
     animation-iteration-count: 3;
     animation-delay: 1s;
