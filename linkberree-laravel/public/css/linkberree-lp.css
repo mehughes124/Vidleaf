@@ -248,7 +248,7 @@ section {
 }
 
 .list-subhead {
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .exclusive-line {
@@ -330,7 +330,7 @@ section {
     font-size: 1.25rem;
 }
 
-.link-wrapper a {
+/* .link-wrapper a {
     cursor: pointer;
     background: rgb(250, 249, 246);
     color: #e81b8e; 
@@ -342,14 +342,32 @@ section {
     margin-top: 10px;
     width: 90%;
     border-radius: 10px;
-    /* transition: all 3s ease-in-out;
+    z-index: 5;
+} */
+
+.a-anchor-link {
+    display: inline;
+    cursor: pointer;
+    background: rgb(250, 249, 246);
+    color: #e81b8e; 
+    text-decoration: none;
+    padding: 1.05rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    width: 90%;
+    border-radius: 10px;
+    transition: all 3s ease-in-out;
     animation: colorChange 3s forwards;
-    animation-delay: 1.5s; */
+    animation-delay: 1.5s;
     z-index: 5;
 }
 
+
 .link-wrapper button.join-waitlist-button {
     background: rgb(250, 249, 246);
+    font-size: 1.25rem;
     color: #e81b8e;
     text-decoration: none;
     padding: 10px;
@@ -361,28 +379,16 @@ section {
     border-radius: 10px;
     transition: none;
     animation: none;
-    border: none; /* Remove default border of button */
-    cursor: pointer; /* Ensure it's clickable */
-    outline: none; /* Remove default outline, but ensure there's a focus state for accessibility */
-}
-
-
-#a-anchor-button {
-    display: inline;
-    background: rgb(250, 249, 246);
-    color: #e81b8e; 
-    text-decoration: none;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-    width: 90%;
-    border-radius: 10px;
     transition: all 3s ease-in-out;
     animation: colorChange 3s forwards;
     animation-delay: 1.5s;
+    border: none; 
+    cursor: pointer;
+    outline: none;
 }
+
+
+
 
 @keyframes colorChange {
     to {
@@ -395,7 +401,7 @@ section {
     line-height: 1;
     animation: slide 1s ease-in-out 2s forwards;
     transform: translateX(-30px);
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 900;
 }
 

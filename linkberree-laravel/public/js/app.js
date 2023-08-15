@@ -37,9 +37,9 @@ function scrollToSection(event) {
 }
 
 // Attach event listeners
-var anchorLink = document.getElementById("a-anchor-link");
-anchorLink.addEventListener("click", scrollToSection);
-anchorLink.addEventListener("touchend", scrollToSection);
+var anchorLink = document.getElementsByClassName('a-anchor-link');
+anchorLink[0].addEventListener("click", scrollToSection);
+anchorLink[0].addEventListener("touchend", scrollToSection);
 
 
 
@@ -177,7 +177,7 @@ function closeModal() {
 
 
 
-document.querySelectorAll('.join-waitlist-link, .join-waitlist-button').forEach(function(link) {
+document.querySelectorAll('.join-waitlist-button').forEach(function(link) {
     link.addEventListener('click', handleLinkClick);
     link.addEventListener('touchend', function(e) {
         if (!touchMoved) {

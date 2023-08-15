@@ -7,7 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Linkberree | Get More Clicks</title>
         <link href="{{ asset('/css/linkberree-lp.css') }}" rel="stylesheet">
+        <link href="{{ asset('/css/font-awesome-4.7.0/css/font-awesome.min.css') }}" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/805bf6db2e.js" crossorigin="anonymous"></script>
     </head>
     <body>
     <div class="content-wrapper">
@@ -49,11 +51,11 @@
                             <span class="image-text">LinkBerree</span>
                         </div>
                         <div class="link-wrapper">
-                            <a id="a-anchor-link">Get A Better One<span class="link-arrow">⤵</span></a>
+                            <a class="a-anchor-link">Get A Better One<span class="link-arrow"><span class="fa-solid fa-turn-down"></span></span></a>
                         </div>
                     </div>
                 </div>
-                <div class="bounce-arrow">⬇</div>
+                <div class="bounce-arrow"><span class="fa-solid fa-arrow-down"></span></div>
             </div>
         </section>
 
@@ -77,12 +79,12 @@
                             <span class="image-text">LinkBerree</span>
                         </div>
                         <div class="link-wrapper">
-                            <a href="javascript:void(0);" class="join-waitlist-link">Join Waitlist Now<span class="link-email-emoji">✉️</span></a>
+                            <button href="javascript:void(0);" class="join-waitlist-button">Join Waitlist Now<span class="link-email-emoji">✉️</span></a>
                         </div>
                         <div class="exclusive-line">* no spam, ever. Sign up for exclusive Early Access</div>
                     </div>
                 </div>
-                <div class="bounce-arrow">⬇</div>
+                <div class="bounce-arrow"><span class="fa-solid fa-arrow-down"></span></div>
             </div>
         </section>
 
@@ -96,7 +98,7 @@
                 <ul class="list-section">
                     <li><span class="unordered-list-span"><span class="list-headline">Isn't It Easy?</span><br><span class="list-subhead">Just swipe and click... Simple! </span></span></li>
                     <li><span class="unordered-list-span"><span class="list-headline">Launching Soon</span><br><span class="list-subhead">Get on the waitlist to secure early access. </span></span></li>
-                    <li><span class="unordered-list-span"><span class="list-headline">Sign-up Bonus</span><br><span class="list-subhead">early Linkberree signups receive a *lifetime* discount</span></span></li>
+                    <li><span class="unordered-list-span"><span class="list-headline">Sign-up Bonus</span><br><span class="list-subhead">Early Linkberree signups receive a *lifetime* discount</span></span></li>
                 </ul>
             </div>
             <div class="bottom-third-content">
@@ -112,7 +114,7 @@
                         <div class="exclusive-line">* no spam, ever. Sign up for exclusive Early Access.</div>
                     </div>
                 </div>
-                <div class="bounce-arrow">⬇</div>
+                <div class="bounce-arrow"><span class="fa-solid fa-arrow-down"></span></div>
             </div>
         </section>
     </div>
