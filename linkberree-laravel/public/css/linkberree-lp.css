@@ -135,7 +135,7 @@ section {
     z-index: 2;
     color: white;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.75rem;
 }
 
 .hero-copy-line-1 {
@@ -420,7 +420,7 @@ section {
     line-height: 1;
     animation: slide 1s ease-in-out 2s forwards;
     transform: translateX(-30px);
-    font-size: 3rem;
+    font-size: 2.25rem;
     font-weight: 900;
 }
 

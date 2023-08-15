@@ -11,6 +11,15 @@
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/805bf6db2e.js" crossorigin="anonymous"></script>
     </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FP21MGW64"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-7FP21MGW64');
+    </script>
     <body>
     <div class="content-wrapper">
         <div id="modal-form" class="modal">
