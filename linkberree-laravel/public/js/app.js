@@ -1,76 +1,120 @@
+// anchor link js for iOS. Apple blows.
+function scrollToSection(event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    // Add a class to disable scroll snapping
+    document.body.classList.add("no-snap");
+
+    var anchor = document.getElementById("section2");
+    var bodyRect = document.body.getBoundingClientRect();
+    var elemRect = anchor.getBoundingClientRect();
+    var targetPosition = elemRect.top - bodyRect.top;
+    var startPosition = window.scrollY || document.documentElement.scrollTop;
+    var distance = targetPosition - startPosition;
+    var duration = 500;  // Duration in milliseconds
+    var startTime = null;
+
+    function animateScroll(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        var elapsedTime = currentTime - startTime;
+        var progress = Math.min(elapsedTime / duration, 1);  // Ensure progress doesn't exceed 1
+
+        var currentPosition = startPosition + distance * progress;
+        window.scrollTo(0, currentPosition);
+
+        if (progress < 1) {
+            requestAnimationFrame(animateScroll);
+        } else {
+            // Delay re-enabling of scroll-snap-type to ensure scroll has completed
+            setTimeout(function() {
+                document.body.classList.remove("no-snap");
+            }, 500);  // Adjust delay as needed
+        }
+    }
+
+    requestAnimationFrame(animateScroll);
+}
+
+// Attach event listeners
+var anchorLink = document.getElementById("a-anchor-link");
+anchorLink.addEventListener("click", scrollToSection);
+anchorLink.addEventListener("touchend", scrollToSection);
+
+
 
 // global audio and video playback handling, as well as animation controller for arrows 
-let globalMuteState = true;
-let currentSection = null;
+// let globalMuteState = true;
+// let currentSection = null;
 
 const sections = document.querySelectorAll('section');
-sections.forEach((section) => {
-    const video = section.querySelector('video');
-    const svgWrapper = section.querySelector('.svg-background-circle');
-    const svgIcon = section.querySelector('.mute-svg-icon');
+// sections.forEach((section) => {
+//     const video = section.querySelector('video');
+//     const svgWrapper = section.querySelector('.svg-background-circle');
+//     const svgIcon = section.querySelector('.mute-svg-icon');
 
-    section.addEventListener('click', () => {
-        video.muted = !video.muted;
-        globalMuteState = video.muted;
+//     section.addEventListener('click', () => {
+//         video.muted = !video.muted;
+//         globalMuteState = video.muted;
 
-        sections.forEach((section) => {
-            const videoInSection = section.querySelector('video');
-            const svgWrapperInSection = section.querySelector('.svg-background-circle');
-            const svgIconInSection = section.querySelector('.mute-svg-icon');
+//         sections.forEach((section) => {
+//             const videoInSection = section.querySelector('video');
+//             const svgWrapperInSection = section.querySelector('.svg-background-circle');
+//             const svgIconInSection = section.querySelector('.mute-svg-icon');
             
-            if (section !== currentSection){
-                videoInSection.muted = globalMuteState;
-                if(globalMuteState) {
-                    svgWrapperInSection.style.visibility = 'visible';
-                    svgIconInSection.style.visibility = 'visible';
-                } else {
-                    svgWrapperInSection.style.visibility = 'hidden';
-                    svgIconInSection.style.visibility = 'hidden';
-                }
-            }
-        });
+//             if (section !== currentSection){
+//                 videoInSection.muted = globalMuteState;
+//                 if(globalMuteState) {
+//                     svgWrapperInSection.style.visibility = 'visible';
+//                     svgIconInSection.style.visibility = 'visible';
+//                 } else {
+//                     svgWrapperInSection.style.visibility = 'hidden';
+//                     svgIconInSection.style.visibility = 'hidden';
+//                 }
+//             }
+//         });
 
-        svgWrapper.style.visibility = video.muted ? 'visible' : 'hidden';
-        svgIcon.style.visibility = video.muted ? 'visible' : 'hidden';
-    });
-});
+//         svgWrapper.style.visibility = video.muted ? 'visible' : 'hidden';
+//         svgIcon.style.visibility = video.muted ? 'visible' : 'hidden';
+//     });
+// });
 
 // remove muted svg on click and animate bottom arrows on visible
-document.addEventListener('DOMContentLoaded', (event) => {
-    var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            var bounceArrow = entry.target.querySelector('.bounce-arrow');
-            var video = entry.target.querySelector('video');
-            var svgWrapper = entry.target.querySelector('.svg-background-circle');
-            var svgIcon = entry.target.querySelector('.mute-svg-icon');
+// document.addEventListener('DOMContentLoaded', (event) => {
+//     var observer = new IntersectionObserver(function(entries) {
+//         entries.forEach(entry => {
+//             var bounceArrow = entry.target.querySelector('.bounce-arrow');
+//             var video = entry.target.querySelector('video');
+//             var svgWrapper = entry.target.querySelector('.svg-background-circle');
+//             var svgIcon = entry.target.querySelector('.mute-svg-icon');
 
-            if (entry.isIntersecting) {
-                bounceArrow.classList.add('bounce-visible');
-                video.play();
-                if (currentSection && currentSection !== entry.target) {
-                    const previousVideo = currentSection.querySelector('video');
-                    previousVideo.muted = true;
-                    previousVideo.pause();
-                }
-                video.muted = globalMuteState;
-                if(video.muted) {
-                    svgWrapper.style.visibility = 'visible';
-                    svgIcon.style.visibility = 'visible';
-                } else {
-                    svgWrapper.style.visibility = 'hidden';
-                    svgIcon.style.visibility = 'hidden';
-                }
-                currentSection = entry.target;
-            } else {
-                bounceArrow.classList.remove('bounce-visible');
-            }
-        });
-    }, { threshold: [0.5] });
+//             if (entry.isIntersecting) {
+//                 bounceArrow.classList.add('bounce-visible');
+//                 video.play();
+//                 if (currentSection && currentSection !== entry.target) {
+//                     const previousVideo = currentSection.querySelector('video');
+//                     previousVideo.muted = true;
+//                     previousVideo.pause();
+//                 }
+//                 video.muted = globalMuteState;
+//                 if(video.muted) {
+//                     svgWrapper.style.visibility = 'visible';
+//                     svgIcon.style.visibility = 'visible';
+//                 } else {
+//                     svgWrapper.style.visibility = 'hidden';
+//                     svgIcon.style.visibility = 'hidden';
+//                 }
+//                 currentSection = entry.target;
+//             } else {
+//                 bounceArrow.classList.remove('bounce-visible');
+//             }
+//         });
+//     }, { threshold: [0.5] });
 
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-});
+//     sections.forEach(section => {
+//         observer.observe(section);
+//     });
+// });
 
 // remove bouncing arrow from last section
 document.addEventListener('DOMContentLoaded', () => {
@@ -105,54 +149,84 @@ document.getElementById('waitlist-form').addEventListener('submit', function(e) 
     })
     .catch(error => {
         console.error('Error:', error);
-        // You can handle any errors here, such as displaying an error message to the user
     });
 });
 
+let modalForm = document.getElementById('modal-form');
+let touchMoved = false;
 
 function openModal() {
-    document.getElementById('modal-form').style.display = "block";
-}
-function closeModal() {
-    document.getElementById('modal-form').style.display = "none";
+    document.body.classList.add("no-snap");
+    setTimeout(function() {
+        modalForm.style.display = "block";
+        setTimeout(function() {
+            document.body.classList.remove("no-snap");
+        }, 50);
+    }, 25);
 }
 
-document.querySelectorAll('.join-waitlist-link').forEach(function(link) {
-    link.addEventListener('click', function(e) {
-        e.preventDefault(); // Prevent the default behavior of the link
-        openModal();
+function closeModal() {
+    document.body.classList.add("no-snap");
+    setTimeout(function() {
+        modalForm.style.display = "none";
+        setTimeout(function() {
+            document.body.classList.remove("no-snap");
+        }, 50);
+    }, 25);
+}
+
+
+
+document.querySelectorAll('.join-waitlist-link, .join-waitlist-button').forEach(function(link) {
+    link.addEventListener('click', handleLinkClick);
+    link.addEventListener('touchend', function(e) {
+        if (!touchMoved) {
+            console.log("touchMoved = false")
+            handleLinkClick(e);
+        }
+    });
+    link.addEventListener('touchmove', function() {
+        touchMoved = true;
+    });
+    link.addEventListener('touchstart', function() {
+        touchMoved = false;
     });
 });
+
+function handleLinkClick(e) {
+    e.preventDefault();
+    openModal();
+    console.log("join waitlist clicked");
+}
 
 document.getElementById('modal-form').addEventListener('click', function(e) {
     var modalContent = document.querySelector('.modal-content');
-    
-    // Check if the click was outside the modal content
     if (!modalContent.contains(e.target)) {
         closeModal();
     }
 });
 
-// push up modal on focus on mobile
-if (/Mobi|Android/i.test(navigator.userAgent)) {
-    var emailInput = document.getElementById('email');
-    var modalContent = document.querySelector('.modal-content');
 
-    emailInput.addEventListener('click', function(e) {
-        e.stopPropagation(); // Prevent the click event from closing the modal
-        modalContent.classList.toggle('modal-content-up'); // Toggle the class to adjust the modal's position
-    });
+// // push up modal on focus on mobile
+// if (/Mobi|Android/i.test(navigator.userAgent)) {
+//     var emailInput = document.getElementById('email');
+//     var modalContent = document.querySelector('.modal-content');
 
-    // Prevent clicks inside the modal content from closing the modal
-    modalContent.addEventListener('click', function(e) {
-        e.stopPropagation();
-    });
+//     emailInput.addEventListener('click', function(e) {
+//         e.stopPropagation(); // Prevent the click event from closing the modal
+//         modalContent.classList.toggle('modal-content-up'); // Toggle the class to adjust the modal's position
+//     });
 
-    document.getElementById('modal-form').addEventListener('click', function() {
-        modalContent.classList.remove('modal-content-up'); // Reset the modal's position
-        closeModal();
-    });
-}
+//     // Prevent clicks inside the modal content from closing the modal
+//     modalContent.addEventListener('click', function(e) {
+//         e.stopPropagation();
+//     });
+
+//     document.getElementById('modal-form').addEventListener('click', function() {
+//         modalContent.classList.remove('modal-content-up'); // Reset the modal's position
+//         closeModal();
+//     });
+// }
 
 
 

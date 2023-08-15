@@ -2,13 +2,14 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Linkberree | Get More Clicks</title>
         <link href="{{ asset('/css/linkberree-lp.css') }}" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     </head>
-    <body class="snap-scrolling">
+    <body>
     <div class="content-wrapper">
         <div id="modal-form" class="modal">
             <div class="modal-content">
@@ -23,14 +24,14 @@
             </div>
         </div>
         <section id="section1" class="section-grid section-with-video">
-            <div class="hero-copy-container">
+            <div class="hero-copy-container" id="hero-copy-container-1">
                 <p class="hero-copy-line-1">Your Link-in-Bio</p>
                 <p class="hero-copy-line-2"><span class="twinkle-star">✨</span>SUCKS<spanclass="twinkle-star">✨</span></p>
             </div>  
             <video id="section1-video" width="100%" autoplay muted loop class="section-video">
                 <source src="{{ asset('/videos/peachy_link_lp.mp4') }}" type="video/mp4">
             </video>
-            <div class="bottom-third-content">
+            <div class="bottom-third-content" id="bottom-third-content-1">
                 <!-- <div class="svg-background-circle">
                     <svg class="mute-svg-icon" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 512 512" style="display: block; margin: auto;">
                         <line x1="416" y1="432" x2="64" y2="80" style="stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/>
@@ -48,7 +49,7 @@
                             <span class="image-text">LinkBerree</span>
                         </div>
                         <div class="link-wrapper">
-                            <a href="#section2">Get A Better One<span class="link-arrow">⤵</span></a>
+                            <a id="a-anchor-link">Get A Better One<span class="link-arrow">⤵</span></a>
                         </div>
                     </div>
                 </div>
@@ -76,7 +77,7 @@
                             <span class="image-text">LinkBerree</span>
                         </div>
                         <div class="link-wrapper">
-                            <a href="#section3" class="join-waitlist-link">Join Waitlist Now<span class="link-email-emoji">✉️</span></a>
+                            <a href="javascript:void(0);" class="join-waitlist-link">Join Waitlist Now<span class="link-email-emoji">✉️</span></a>
                         </div>
                         <div class="exclusive-line">* no spam, ever. Sign up for exclusive Early Access</div>
                     </div>
@@ -106,7 +107,7 @@
                             <span class="image-text">LinkBerree</span>
                         </div>
                         <div class="link-wrapper">
-                            <a href="#section3" class="join-waitlist-link">Join Waitlist Now<span class="link-email-emoji">✉️</span></a>
+                            <button href="javascript:void(0);" class="join-waitlist-button">Join Waitlist Now<span class="link-email-emoji">✉️</span></button>
                         </div>
                         <div class="exclusive-line">* no spam, ever. Sign up for exclusive Early Access.</div>
                     </div>

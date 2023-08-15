@@ -1,15 +1,18 @@
+
 html, body {
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
     font-size: 2vh;
+    scroll-snap-type: y mandatory;
+    /* scroll-behavior: auto; */
 }
 
 body {
     font-family: 'Lato', sans-serif;
+
+    background-image: radial-gradient(56% 100%, rgb(255, 255, 255) 25%, rgba(51, 21, 78, 0.13) 150%);
 }
 
 @media (min-width: 768px) {
@@ -18,8 +21,17 @@ body {
     }
 }
 
-body {
-    background-image: radial-gradient(56% 100%, rgb(255, 255, 255) 25%, rgba(51, 21, 78, 0.13) 150%);
+/* the .no-snap section here is necessitated by iOS Safari being hot garbahj 
+and not playing nice with anchor links when scroll-snap-type: mandatory is on 
+ */
+
+.no-snap {
+    scroll-snap-type: none !important;
+}
+
+.no-snap section {
+    scroll-snap-align: none !important;
+    scroll-snap-stop: normal !important;
 }
 
 .content-wrapper {
@@ -45,17 +57,16 @@ body {
 
 .modal-content {
     background-color: #fefefe;
-    margin: 75% auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
     max-width: 350px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     text-align: center;
-}
-
-.modal-content-up {
-    margin-top: 35%;
 }
 
 .modal-content input {
@@ -98,6 +109,7 @@ body {
 }
 
 section {
+    overscroll-behavior: none;
     background-color: rgb(20,20,20);
     scroll-snap-align: start;
     scroll-snap-stop: always;
@@ -111,8 +123,11 @@ section {
     display: grid;
     grid-template-rows: 1fr 50vh 1fr;
     
-}
+}    
 
+#hero-copy-container-1 {
+    transform: translateY(-3vh);
+}
 
 .hero-copy-container {
     margin-top: 5vh;
@@ -138,10 +153,12 @@ section {
     width: 100%;
     object-fit: contain;
     z-index: 1;
+    pointer-events: none;
+    transform: translateY(-3vh);
 }
 
 .bottom-third-content {
-    transform: translateY(-5vh);
+    transform: translateY(-7vh);
     position: relative;
     z-index: 2;
     color: rgb(42, 42, 42);
@@ -153,6 +170,13 @@ section {
     flex-direction: column;
     justify-content: space-between;
 }
+
+@media screen and (min-width: 500px) {
+    .bottom-third-content {
+        transform: translateY(-10vh);
+    }
+}
+
 
 @keyframes fade-in-hero {
     0% {
@@ -307,6 +331,44 @@ section {
 }
 
 .link-wrapper a {
+    cursor: pointer;
+    background: rgb(250, 249, 246);
+    color: #e81b8e; 
+    text-decoration: none;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    width: 90%;
+    border-radius: 10px;
+    /* transition: all 3s ease-in-out;
+    animation: colorChange 3s forwards;
+    animation-delay: 1.5s; */
+    z-index: 5;
+}
+
+.link-wrapper button.join-waitlist-button {
+    background: rgb(250, 249, 246);
+    color: #e81b8e;
+    text-decoration: none;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    width: 90%;
+    border-radius: 10px;
+    transition: none;
+    animation: none;
+    border: none; /* Remove default border of button */
+    cursor: pointer; /* Ensure it's clickable */
+    outline: none; /* Remove default outline, but ensure there's a focus state for accessibility */
+}
+
+
+#a-anchor-button {
+    display: inline;
     background: rgb(250, 249, 246);
     color: #e81b8e; 
     text-decoration: none;
