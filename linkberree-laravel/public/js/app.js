@@ -1,3 +1,17 @@
+// Event snippet for Waitlist Joined_custom conversion page
+function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-979988400/tg39CIDx9NIYELDfpdMD',
+        'event_callback': callback
+    });
+    return false;
+  }
+
 // anchor link js for iOS. Apple blows.
 function scrollToSection(event) {
     event.preventDefault();
@@ -147,6 +161,7 @@ document.getElementById('waitlist-form').addEventListener('submit', function(e) 
         document.getElementById('waitlist-form').classList.add('hidden');
         document.getElementById('success-message').classList.remove('hidden');
         gtag('event', 'user_joined_waitlist');
+        gtag_report_conversion();
     })
     .catch(error => {
         console.error('Error:', error);
@@ -207,6 +222,9 @@ document.getElementById('modal-form').addEventListener('click', function(e) {
         closeModal();
     }
 });
+
+
+
 
 
 // // push up modal on focus on mobile

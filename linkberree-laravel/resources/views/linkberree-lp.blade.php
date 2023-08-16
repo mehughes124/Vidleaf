@@ -21,7 +21,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-7FP21MGW64');
+    gtag('config', 'G-7FP21MGW64', { ' allow_enhanced_conversions':true });
     </script>
     <body>
     <div class="content-wrapper">
