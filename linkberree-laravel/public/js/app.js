@@ -146,6 +146,7 @@ document.getElementById('waitlist-form').addEventListener('submit', function(e) 
         // Show the success message
         document.getElementById('waitlist-form').classList.add('hidden');
         document.getElementById('success-message').classList.remove('hidden');
+        gtag('event', 'user_joined_waitlist');
     })
     .catch(error => {
         console.error('Error:', error);
@@ -176,12 +177,11 @@ function closeModal() {
 }
 
 
-
+let button_click_count = 0;
 document.querySelectorAll('.join-waitlist-button').forEach(function(link) {
     link.addEventListener('click', handleLinkClick);
     link.addEventListener('touchend', function(e) {
         if (!touchMoved) {
-            console.log("touchMoved = false")
             handleLinkClick(e);
         }
     });
@@ -196,6 +196,8 @@ document.querySelectorAll('.join-waitlist-button').forEach(function(link) {
 function handleLinkClick(e) {
     e.preventDefault();
     openModal();
+    gtag('event', 'join_waitlist_modal_open', {button_click_count});
+    button_click_count++;
     console.log("join waitlist clicked");
 }
 
