@@ -4,10 +4,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Linkberree | Get More Clicks</title>
+        <title>Linkberree | A better link-in-bio.</title>
+        <meta name="description" content="Your link-in-bio sucks. A LinkBerree gets you more clicks. Get one today.">
+        <meta property="og:title" content="Linkberree | A better link-in-bio that gets more clicks" />
+        <meta property="og:description" content="Your link-in-bio sucks. A LinkBerree gets you more clicks. Get one today." />
+        <meta property="og:image" content="{{ asset('/images/linkberree_og.png') }}"/>
+        <meta property="og:url" content="https://linkberr.ee"/>
+        <meta property="og:site_name" content="LinkBerree" />
         <link href="{{ asset('/css/linkberree-lp.css') }}" rel="stylesheet">
-        <link href="{{ asset('/css/font-awesome-4.7.0/css/font-awesome.min.css') }}" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/805bf6db2e.js" crossorigin="anonymous"></script>
     </head>
@@ -17,7 +21,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-7FP21MGW64');
     </script>
     <body>
