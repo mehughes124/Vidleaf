@@ -80,7 +80,7 @@
                 <ul class="list-section">
                     <li><span class="unordered-list-span"><span class="list-headline">*Easy* to Click</span><br><span class="list-subhead"> Every link is right under your fan's thumbs 👍</span></span></li>
                     <li><span class="unordered-list-span"><span class="list-headline">*A Reason* To Click</span><br><span class="list-subhead"> Tell your fans WHY to click with a video, pic or description</span></span></li>
-                    <li><span class="unordered-list-span"><span class="list-headline">*What* To Click</span><br><span class="list-subhead"> Each link stands alone in a swipeable section</span></span></li>
+                    <li><span class="unordered-list-span"><span class="list-headline">*What* To Click</span><br><span class="list-subhead"> Each link stands out in its own section</span></span></li>
                 </ul>
             </div>
             <div class="bottom-third-content">
