@@ -14,6 +14,11 @@
         <link href="{{ asset('/css/linkberree-lp.css') }}" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/805bf6db2e.js" crossorigin="anonymous"></script>
+        <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet" />
+        <script src="https://vjs.zencdn.net/7.15.4/video.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dashjs/4.1.1/dash.all.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-dash/3.2.0/videojs-dash.min.js"></script>
+
     </head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FP21MGW64"></script>
@@ -42,8 +47,15 @@
                 <p class="hero-copy-line-1">Your Link-in-Bio</p>
                 <p class="hero-copy-line-2"><span class="twinkle-star">✨</span>SUCKS<spanclass="twinkle-star">✨</span></p>
             </div>  
-            <video id="section1-video" width="100%" autoplay muted loop class="section-video">
+            <!-- <video id="section1-video" width="100%" autoplay muted loop class="section-video">
                 <source src="{{ asset('/videos/peachy_link_lp.mp4') }}" type="video/mp4">
+            </video> -->
+            <video id="my-video" class="section-video" class="video-js" preload="auto" data-setup='{}' autoplay muted loop>
+                <source src="https://customer-84jgqs8qcq480tqo.cloudflarestream.com/a08b993708e7484c9265cd9356b2d03b/manifest/video.mpd" type="application/dash+xml">
+                <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a web browser that
+                    <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
             </video>
             <div class="bottom-third-content" id="bottom-third-content-1">
                 <!-- <div class="svg-background-circle">

@@ -14,6 +14,11 @@ return [
     |
     */
 
+    'cloudflare' => [
+        'stream_api_key' => env('CLOUDFLARE_STREAM_API_KEY'),
+        'account_id' => env('CLOUDFLARE_ACCOUNT_ID'),
+    ],
+
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),

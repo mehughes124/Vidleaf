@@ -42,4 +42,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    /**
+     * Get the sections associated with the user.
+     */
+    public function sections()
+    {
+        return $this->hasMany(Section::class);
+    }
 }
