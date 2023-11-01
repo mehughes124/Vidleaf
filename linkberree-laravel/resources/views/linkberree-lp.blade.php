@@ -14,10 +14,7 @@
         <link href="{{ asset('/css/linkberree-lp.css') }}" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/805bf6db2e.js" crossorigin="anonymous"></script>
-        <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet" />
-        <script src="https://vjs.zencdn.net/7.15.4/video.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/dashjs/4.1.1/dash.all.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-dash/3.2.0/videojs-dash.min.js"></script>
+        <link href="https://vjs.zencdn.net/8.5.2/video-js.css" rel="stylesheet" />
 
     </head>
     <!-- Google tag (gtag.js) -->
@@ -50,8 +47,8 @@
             <!-- <video id="section1-video" width="100%" autoplay muted loop class="section-video">
                 <source src="{{ asset('/videos/peachy_link_lp.mp4') }}" type="video/mp4">
             </video> -->
-            <video id="my-video" class="section-video" class="video-js" preload="auto" data-setup='{}' autoplay muted loop>
-                <source src="https://customer-84jgqs8qcq480tqo.cloudflarestream.com/a08b993708e7484c9265cd9356b2d03b/manifest/video.mpd" type="application/dash+xml">
+            <video id="my-video" class="section-video video-js" preload="auto" data-setup='{}' autoplay muted loop>
+                <!-- The <source> tag will be filled by the script below -->
                 <p class="vjs-no-js">
                     To view this video please enable JavaScript, and consider upgrading to a web browser that
                     <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
@@ -144,4 +141,34 @@
     </div>
     </body>
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="https://vjs.zencdn.net/8.5.2/video.min.js"></script>
+    <script>
+        document.addEventListener('touchstart', function() {
+    console.log("Touch event triggered!");
+        });
+    // document.addEventListener('DOMContentLoaded', function() {
+        // const videoElement = document.getElementById('my-video');
+        
+        // // Check if the user's device is running iOS
+        // const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+        // // Define the video manifests
+        // const HLS_MANIFEST = "https://customer-84jgqs8qcq480tqo.cloudflarestream.com/a08b993708e7484c9265cd9356b2d03b/manifest/video.m3u8";
+        // const DASH_MANIFEST = "https://customer-84jgqs8qcq480tqo.cloudflarestream.com/a08b993708e7484c9265cd9356b2d03b/manifest/video.mpd";
+
+        // // Create a new <source> element
+        // const sourceElement = document.createElement('source');
+
+        // if (isIOS) {
+        //     sourceElement.src = HLS_MANIFEST;
+        //     sourceElement.type = "application/x-mpegURL";
+        // } else {
+        //     sourceElement.src = DASH_MANIFEST;
+        //     sourceElement.type = "application/dash+xml";
+        // }
+
+        // // Append the <source> element to the <video> tag
+        // videoElement.appendChild(sourceElement);
+    // });
+    </script>
 </html>
