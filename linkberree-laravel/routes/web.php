@@ -50,8 +50,6 @@ Route::post('/join-waitlist', function (Request $request) {
 
 Route::get('/sections', Sections::class)->middleware(['auth', 'verified'])->name('sections');
 
-
-
 Route::get('/section-builder', SectionBuilder::class)->middleware('auth');
 
 Route::post('/update-section-order', [SectionOrderController::class, 'updateSectionOrder']);
